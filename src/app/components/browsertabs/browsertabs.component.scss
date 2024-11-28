@@ -1,0 +1,71 @@
+.bg-image {
+    position: absolute;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+}
+
+.tabs-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    /* Adjust as needed */
+    overflow: hidden;
+}
+
+.tabs {
+    height: 40px;
+    background: rgb(30 29 54 / 20%);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.tab {
+    display: flex;
+    align-items: center;
+    font-family: "Roboto", sans-serif;
+    font-weight: 2 00;
+    width: 240px;
+    color: white;
+    font-size: 12px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 1;
+    height: 30px;
+    backdrop-filter: blur(8px);
+    background: radial-gradient(circle at 10% 20%, rgba(8, 65, 83, 0.623) 0%, rgba(7, 16, 60, 0.525) 110.2%);
+    border-radius: 8px;
+}
+
+.tab-added {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.tab-removed {
+    transform: translateX(-100%);
+    opacity: 0;
+}
+
+.cancel-tab {
+    height: 18px;
+    width: 18px;
+    transition: .2s all ease-in-out;
+}
+
+.cancel-tab:hover {
+    border-radius: 50%;
+    background-color: rgba(104, 104, 104, 0.44);
+}
+
+.add-tab {
+    height: 25px;
+    width: 25px;
+    border-radius: 50%;
+    background-color: rgba(6, 47, 59, 0.842);
+    transition: .3s all ease-in-out;
+}
+
+.add-tab:hover {
+    background-color: rgba(12, 91, 115, 0.808);
+}

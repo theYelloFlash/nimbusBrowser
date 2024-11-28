@@ -1,0 +1,19 @@
+<img class='bg-image' src="assets/images/background.jpg" alt="background">
+<div class="tabs-container">
+    <div class="tabs d-flex align-items-center gap-1 px-2 py-3">
+        @for (item of tabs; track $index) {
+        <div class="tab d-flex justify-content-between px-2"
+            [ngClass]="{ 'tab-added': addingTabIndex === $index, 'tab-removed': removingTabIndex === $index}">
+            <div class="d-flex align-items-center">
+                <img src="assets/logos/nimbusLogo.png" [height]="17" [width]="17" class="me-2 rounded-circle">
+                <span>{{item}} </span>
+            </div>
+            <span class="cancel-tab d-flex align-items-center justify-content-center" (click)="cancelTab($index)"><i
+                    class="bi bi-x fs-6"></i></span>
+        </div>
+        }
+        <div class="add-tab d-flex align-items-center justify-content-center" (click)="addTab()">
+            <i class="bi bi-plus text-white fs-5 m-0 p-0"></i>
+        </div>
+    </div>
+</div>
